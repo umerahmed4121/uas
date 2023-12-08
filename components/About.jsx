@@ -1,20 +1,21 @@
 "use client"
 
 import React from 'react'
-import { Tilt } from 'react-tilt'
-import { motion, spring } from 'framer-motion'
+import { Tilt }  from 'react-tilt'
+import { motion } from 'framer-motion'
 
 import { styles } from '@/app/style'
 import { services } from '@/constants'
-import { fadeIn, textVariant } from '@/utils/motion'
 import { SectionWrapper } from '@/hoc'
+import { fadeIn, textVariant } from '@/utils/motion'
+
 
 const ServiceCard = ({index, title, icon}) => {
   return(
-    <Tilt className="xs:w-[250px] w-full">
+    <Tilt className="w-full sm:w-[250px]">
       <motion.div 
       variants={fadeIn("right", "spring", 0.5*index, 0.75)}
-      className='w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card'
+      className='w-full  green-pink-gradient p-[1px] rounded-[20px] shadow-card'
       >
         <div
         option={{
